@@ -91,7 +91,7 @@ Regroupement de l'ensemble des modules après leur validation par chaque dévelo
 Cette partie permet de s'assurer que toutes les fonctionnalités de l'application sont valides, après l'intégration.
 Le diagramme ci-dessous illustre pour chaque étape du déroulement du projet, les dates de début et de fin ainsi que la durée.
 
-![Temps]([![tableau](images/temps.png "tableau")](http://images/temps.png "tableau")temps.png "Temps")
+[![1-](images/temps.png "1-")](https://github.com/c2-2019/GoStore/images/temps.png "1-")
 
 
 
