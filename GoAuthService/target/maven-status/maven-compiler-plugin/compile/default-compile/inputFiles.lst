@@ -1,0 +1,16 @@
+/Users/marounmelhem/Java/goStore/GoAuthService/src/main/java/GoAuth/dto/UserResponseDTO.java
+/Users/marounmelhem/Java/goStore/GoAuthService/src/main/java/GoAuth/model/User.java
+/Users/marounmelhem/Java/goStore/GoAuthService/src/main/java/GoAuth/security/MyUserDetails.java
+/Users/marounmelhem/Java/goStore/GoAuthService/src/main/java/GoAuth/security/WebSecurityConfig.java
+/Users/marounmelhem/Java/goStore/GoAuthService/src/main/java/GoAuth/controller/UserController.java
+/Users/marounmelhem/Java/goStore/GoAuthService/src/main/java/GoAuth/configuration/SwaggerConfig.java
+/Users/marounmelhem/Java/goStore/GoAuthService/src/main/java/GoAuth/security/JwtTokenFilterConfigurer.java
+/Users/marounmelhem/Java/goStore/GoAuthService/src/main/java/GoAuth/exception/CustomException.java
+/Users/marounmelhem/Java/goStore/GoAuthService/src/main/java/GoAuth/dto/UserDataDTO.java
+/Users/marounmelhem/Java/goStore/GoAuthService/src/main/java/GoAuth/JwtAuthServiceApp.java
+/Users/marounmelhem/Java/goStore/GoAuthService/src/main/java/GoAuth/repository/UserRepository.java
+/Users/marounmelhem/Java/goStore/GoAuthService/src/main/java/GoAuth/model/Role.java
+/Users/marounmelhem/Java/goStore/GoAuthService/src/main/java/GoAuth/security/JwtTokenProvider.java
+/Users/marounmelhem/Java/goStore/GoAuthService/src/main/java/GoAuth/service/UserService.java
+/Users/marounmelhem/Java/goStore/GoAuthService/src/main/java/GoAuth/exception/GlobalExceptionHandlerController.java
+/Users/marounmelhem/Java/goStore/GoAuthService/src/main/java/GoAuth/security/JwtTokenFilter.java
