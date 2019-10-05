@@ -1,17 +1,21 @@
 # Dependencies
-import picamera
+from picamera import PiCamera
 import time
 
-# Variables
-currentTime=time.time()
-rootPath='/home/pi/Uni/goStore/iotServices/'
-imgPath=rootPath+'capturedImages/'+currentTime+'.jpg'
+# Setup camera sensor
+print("Setting up camera sensor...")
+camera = PiCamera()
+camera.start_preview()
 
-# Setup camera / close running cameras when done
-print("Taking a picture...")
+# Allow break to sense the light levels
+print("Opening camera...")
+time.sleep(3)
 
-with picamera.PiCamera() as camera:
-    camera.resolution=(1280,720)
-    camera.capture(imgPath)
+# Take still photo
+print("Taking photo...")
+camera.capture("/home/pi/mmData/Uni/iotServices/capturedImages/userImage.jpg")
 
-print('Picture taken and saved in: '+imgPath)
+print("Photo captured! Stopping camera...")
+camera.stop_preview()
+
+print("All Done!")

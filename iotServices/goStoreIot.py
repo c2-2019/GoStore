@@ -1,5 +1,6 @@
 # Dependencies
 import RPi.GPIO as GPIO
+from picamera import PiCamera
 import time
 
 # Common variables
@@ -40,9 +41,10 @@ try:
       
       # Displaying distance
       print("Distance is: ",distance,"cm")
+      print(" ")
       
       # Checking if an item was taken
-      if distance > 3:
+      if distance > 5:
           itemPicked=True
           print("An item was taken")
       else:
@@ -54,4 +56,22 @@ finally:
       
 # Take picture if item was taken
 if itemPicked:
-    
+    # Setup camera sensor
+    print(" ")
+    print("Setting up camera sensor...")
+    camera = PiCamera()
+    camera.start_preview()
+
+    # Allow break to sense the light levels
+    print("Opening camera...")
+    time.sleep(3)
+
+    # Take still photo
+    print("Taking photo...")
+    camera.capture("/home/pi/mmData/Uni/iotServices/capturedImages/userImage.jpg")
+
+    print("Photo captured! Stopping camera...")
+    camera.stop_preview()
+
+    print(" ")
+    print("All Done!")
