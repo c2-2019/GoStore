@@ -122,18 +122,6 @@ la mettre en place facilement dans les magasins. De plus, le développement devr
 suivre toutes les normes techniques pour une meilleure performance, maintenance et facilité de mise à jour.
 
 
-# Spécifications
-
-## I. Spécifications fonctionnelles
-
-L'utilisateur devra simplement télécharger l'application et créer un profil. Le profil contient le nom complet, la photo du visage de l'utilisateur, les informations de la carte de paiement, son numéro de téléphone et son adresse s'il le souhaite. 
-Une fois le profil créé, l'utilisateur peut accéder au magasin en scannant le QR code. Il peut ensuite effectuer l'achat et prendre les produits qu'il souhaite, puis quitter le magasin sans s'arrêter devant le fonds de comptabilité ou compter la valeur des produits qu'il a pris. 
-Au moment du départ, il est seulement nécessaire de refaire le scan du QR code pour pouvoir sortir.
-
-
-
-
-
 # Déroulement du projet
 
 ## I. Planification
@@ -162,6 +150,14 @@ Le diagramme ci-dessous illustre pour chaque étape du déroulement du projet, l
 ![1-](images/temps.png "1-")
 
 
+
+# Spécifications
+
+## I. Spécifications fonctionnelles
+
+L'utilisateur devra simplement télécharger l'application et créer un profil. Le profil contient le nom complet, la photo du visage de l'utilisateur, les informations de la carte de paiement, son numéro de téléphone et son adresse s'il le souhaite. 
+Une fois le profil créé, l'utilisateur peut accéder au magasin en scannant le QR code. Il peut ensuite effectuer l'achat et prendre les produits qu'il souhaite, puis quitter le magasin sans s'arrêter devant le fonds de comptabilité ou compter la valeur des produits qu'il a pris. 
+Au moment du départ, il est seulement nécessaire de refaire le scan du QR code pour pouvoir sortir.
 
 
 ## II. Spécifications technique
