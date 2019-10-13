@@ -2,8 +2,8 @@
 ##  Introduction..............................................................................................................................
 ##  Description du projet............................................................................................................
 - #### I.Objectifs du projet
-- #### II.Avantages attendu
-- #### III.Desavantages
+- #### II.Points Forts
+- #### III.Points Faibles
 - #### IV.Fonctionnalités ciblées
 
 ##  Objectifs quantitatifs.............................................................................................................
@@ -25,8 +25,8 @@
 - #### II. Spécifications technique.................................................................................................................................................................
 
    .1. Technologies utilisées 
-   
-   
+  
+  
    .2. Configurations de machines
    
    
@@ -69,7 +69,7 @@ Les clients peuvent visualiser leur panier en temps réel sur leur téléphone a
 Tout au long du projet, la notion de passage à l’échelle devra être prise en compte. L’objectif à long terme de la conception et du développement d’un tel système d’information est de pouvoir être utilisé par toutes les catégories et magasins.
 
 
-## II. Avantages attendu du "Go Store"
+## II. Points Forts
 
 - Pas d'attente dans les lignes.
 - Pas de caissiers.
@@ -80,7 +80,7 @@ Tout au long du projet, la notion de passage à l’échelle devra être prise e
 - Le vol à l'étalage est littéralement impossible
 
 
-## III Desavantages
+## III Points Faibles
 
 - Le client devrait avoir l'application .
 - Le client devrait avoir un compte.
@@ -122,6 +122,7 @@ la mettre en place facilement dans les magasins. De plus, le développement devr
 suivre toutes les normes techniques pour une meilleure performance, maintenance et facilité de mise à jour.
 
 
+
 # Déroulement du projet
 
 ## I. Planification
@@ -150,7 +151,6 @@ Le diagramme ci-dessous illustre pour chaque étape du déroulement du projet, l
 ![1-](images/temps.png "1-")
 
 
-
 # Spécifications
 
 ## I. Spécifications fonctionnelles
@@ -159,10 +159,21 @@ L'utilisateur devra simplement télécharger l'application et créer un profil. 
 Une fois le profil créé, l'utilisateur peut accéder au magasin en scannant le QR code. Il peut ensuite effectuer l'achat et prendre les produits qu'il souhaite, puis quitter le magasin sans s'arrêter devant le fonds de comptabilité ou compter la valeur des produits qu'il a pris. 
 Au moment du départ, il est seulement nécessaire de refaire le scan du QR code pour pouvoir sortir.
 
-
 ## II. Spécifications technique
 
 ### 1.Technologies utilisées
+
+Dans ce project en doit utiliser Java comme language du developement des services, on doit créer des sevices indepedants using spring boot qui peut être applées par restfull APIs. On a choisir Java a cause de sa capacité à passer facilement d'un système informatique à un autre, la possibilité d'exécuter le même programme sur de nombreux systèmes différents est cruciale, et Java y parvient en étant indépendant de la plate-forme.
+En raison de la robustesse, de la facilité d'utilisation, des capacités multi-plateformes et des fonctionnalités de sécurité de Java, la décision est prise.
+
+D'autre part pour le raspberry pi, senors et automation on doit ustiliser Python. Parce que Python est la language utiliser par defaut in rusbery pi ,et en plus, Python est un langage polyvalent, multiplateforme et open source.
+
+Enfin, pour l'application mobile en doit créer cross-platform mobile app ,
+pour reduire le temps du developement de deux mobile app ios/android , en plus cross platform utilise javascript ce qui donne la facile à intégrer avec d'autres services et fournisseurs et encore il est universal.
+
+
+
+
 
 
 ### 2.Configurations de machines
@@ -182,4 +193,14 @@ Pour finir, nous allons décrire l'ensemble des ressources mises a disposition p
 #### Ressources humaines
 Le projet sera réalisé par un groupe de trois étudiants. Il est nécessaire d'évaluer la charge de travail que chaque membre sera en mesure de fournir, notamment pour les tâches qui nécessitent une répartition : programmation et tests unitaires. On estime la charge de travail personnel qui devra être
 consacrée à la conception, au développement et aux tests unitaires à environ 120 heures pour chaque membre du groupe.
+
+#### Équipements
+
+Pour que nous puissions créer cette idée et l'appliquer correctement, nous avons besoin d'un ensemble d'équipements:
+
+-Raspberry Pi
+-Bread Board
+-Cables de connections
+-Proximity sensor
+-Camera sensor
 
