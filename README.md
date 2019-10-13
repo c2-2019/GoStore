@@ -36,7 +36,9 @@
    .4. les librairies utilisées
 
 
+## Diagrammes et documents
 
+#### Diagramme de base de données (MLD)
 ------------
 
 
@@ -204,3 +206,8 @@ Pour que nous puissions créer cette idée et l'appliquer correctement, nous avo
 - Proximity sensor
 - Camera sensor
 
+## Diagrammes et documents
+
+####  Diagramme de base de données (MLD)
+
+![MLD](images/mld.jpg "MLD")
