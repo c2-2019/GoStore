@@ -198,9 +198,9 @@ consacrée à la conception, au développement et aux tests unitaires à environ
 
 Pour que nous puissions créer cette idée et l'appliquer correctement, nous avons besoin d'un ensemble d'équipements:
 
--Raspberry Pi
--Bread Board
--Cables de connections
--Proximity sensor
--Camera sensor
+- Raspberry Pi
+- Bread Board
+- Cables de connections
+- Proximity sensor
+- Camera sensor
 
