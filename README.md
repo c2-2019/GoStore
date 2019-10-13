@@ -168,17 +168,6 @@ Le diagramme ci-dessous illustre pour chaque étape du déroulement du projet, l
 
 ### 1.Technologies utilisées
 
-Nous utiliserons une architecture J2EE pour le serveur sur lequel nous développerons une API RESTful. Pour
-l’application et l’interface Web, nous utiliserons VueJS et Apache Cordova. La
-base de données sur le serveur sera en MySQL. Les communications en
-temps réel (positionnement) seront faites en Websocket ou via les services
-fournis par Google Maps.
-
-rusberypi ,automation, sensor --> python  language by default in rusberpi compatible with equipments end sensors
-
-microservice dependent : using java scalable java 
-
-mobile app : cross platform code wa7ad ios and android easy to integrate universal 
 
 ### 2.Configurations de machines
 
