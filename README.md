@@ -274,4 +274,4 @@ Lorsque vous quittez le magasin, vous recevez un rapport de paiement dans l'appl
 
 ####  Diagramme de base de données (MLD)
 
-![MLD](images/mld.jpg "Mafin de
+![MLD](images/mld.jpg)
