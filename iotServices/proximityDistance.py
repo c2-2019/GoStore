@@ -51,7 +51,3 @@ try:
 finally:
       # Clean GPIO when done
       GPIO.cleanup()
-      
-# Take picture if item was taken
-if itemPicked:
-    
