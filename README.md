@@ -52,6 +52,8 @@
 ## Diagrammes et documents
 
 - ####  Diagramme de base de données (MLD)
+
+## WireFrames
 ------------
 
 
@@ -277,6 +279,6 @@ Lorsque vous quittez le magasin, vous recevez un rapport de paiement dans l'appl
 ![MLD](images/mld.jpg)
 
 
-## Wireframing
+## WireFrames
 
 ![MLD](images/wireframes.jpg)
