@@ -1,4 +1,49 @@
-# GoStore
+# Sommaire
+##  Introduction..............................................................................................................................
+##  Description du projet............................................................................................................
+- #### I.Objectifs du projet
+- #### II.Points Forts
+- #### III.Points Faibles
+- #### IV.Fonctionnalités ciblées
+
+##  Objectifs quantitatifs.............................................................................................................
+
+## Déroulement du projet........................................................................................................
+
+- #### I.Planification
+- #### II.Spécifications
+- #### III.Conception
+- #### IV.Programmation
+- #### V.Tests unitaires
+- #### VI.Intégration
+- #### VII.Test global
+
+##  Spécification..........................................................................................................................
+
+- #### I. Spécifications fonctionnelles .........................................................................................................................................................
+
+- #### II. Spécifications technique.................................................................................................................................................................
+
+   .1. Technologies utilisées 
+  
+  
+   .2. Configurations de machines
+   
+   
+   .3. Architecture technique de produit
+   
+   
+   .4. les librairies utilisées
+
+
+## Diagrammes et documents
+
+#### Diagramme de base de données (MLD)
+------------
+
+
+------------
+
 
 #  Introduction
 Dans le cadre de l’unité d’enseignement "Projet" du matière Architectures Logicielles Java (C2) à l’université ISAE Cnam, il nous ait demandé de travailler sur un projet de développement de système d’information de notre choix.
@@ -9,6 +54,7 @@ Après discussion entre les membres de l’équipe chargée de la mise en œuvre
 Ce document décrit le contexte, les besoins fonctionnels et les objectifs du projet. Un premier découpage des étapes nécessaires à la réalisation d’un tel projet donne lieu dans de document à un planning prévisionnel. Ce document a pour finalités de définir le projet de manière simple et détaillée et de définir les objectifs auxquels devra répondre une future spécification technique.
 
 #  Description du projet
+
 ## I. Objectifs du projet
 L'objectif principal du projet est d'améliorer la gestion des ventes et des achats en magasin et de transformer le processus de vente et de facturation en un processus automatique.
 Au départ, il s’agit d’identifier clairement les besoins et les attentes
@@ -24,7 +70,8 @@ Les clients peuvent visualiser leur panier en temps réel sur leur téléphone a
 
 Tout au long du projet, la notion de passage à l’échelle devra être prise en compte. L’objectif à long terme de la conception et du développement d’un tel système d’information est de pouvoir être utilisé par toutes les catégories et magasins.
 
-## II. Avantages du "Go Store"
+
+## II. Points Forts
 
 - Pas d'attente dans les lignes.
 - Pas de caissiers.
@@ -35,12 +82,14 @@ Tout au long du projet, la notion de passage à l’échelle devra être prise e
 - Le vol à l'étalage est littéralement impossible
 
 
-## III Desavantages
+## III Points Faibles
+
 - Le client devrait avoir l'application .
 - Le client devrait avoir un compte.
 - Le client a besoin d’Internet pour entrer dans le magasin.
 
 ## IV. Fonctionnalités ciblées
+
 Les fonctionnalités attendues de l'application sont les suivantes :
 - Ajoutter , Mettre à jour, et effacer un produit.
 - Inscrire, Mettre à jour , et effacer un client.
@@ -56,48 +105,109 @@ Les fonctionnalités attendues de l'application sont les suivantes :
 - Permettre au gérant de magasin de voir les rapports de vente.
 
 
+# Objectifs quantitatifs
 
+Ce projet qui sera appliqué est en principe un projet universitaire et l’objectif est d’appliquer les acquis de l’enseignement scolaire. Il peut ensuite être étendu, consulté et appliqué dans les magasins pour faciliter les achats et faciliter ainsi la vie des gens.
 
 # Contraintes du projet
-### Contraintes en termes de délais
+
+### I. Contraintes en termes de délais
 A partir de la livraison du cahier des charges, nous disposons d’environ un mois et demis pour la réalisation du projet. Le délai semble court pour le projet entier dédié à la gestion des processus d'un magasin complet ,mais reste suffisant pour se concentrer sur la partie prévue pour l'idee.
 
-###  Contraintes de sécurité
+### II. Contraintes de sécurité
 La gestion de la sécurité est la principale contrainte de notre système. L'application doit posséder une gestion de privilèges et de niveaux d'accès pour les différents types d'utilisateurs (Clients,administration,..). Selon leur statut, le contenu des pages varie et l'accès aux informations avec un statut
 supérieur est interdit.
 
-### Contraintes technique
+### III. Contraintes technique
  La structure de notre système doit être extensible pour
 la mettre en place facilement dans les magasins. De plus, le développement devra
 suivre toutes les normes techniques pour une meilleure performance, maintenance et facilité de mise à jour.
 
 
+
 # Déroulement du projet
 
-## 1. Planification
+## I. Planification
 
 Une première analyse du projet nous à permis de définir une suite d’étapes à suivre pour sa réalisation.
-#### Spécifications
+
+- #### Spécifications
 Durant cette étape, nous allons définir clairement ce qui doit être réalisé pour atteindre chaque objectif du projet.
-#### Conception
+
+- #### Conception
 Cette phase permettra de faire le choix entre les différentes solutions techniques en respectant les contraintes du projet.
-#### Programmation
+
+- #### Programmation
 Écriture du code des différents modules et leurs fonctionnalités.
-#### Tests unitaires
+
+- #### Tests unitaires
 Cette étape se chevauche avec l'étape de programmation, les tests unitaires devront être effectues pendant le développement pour s'assurer du bon fonctionnement du chaque module du l'application.
-#### Intégration
+
+- #### Intégration
 Regroupement de l'ensemble des modules après leur validation par chaque développeur des composants qu'il a réalisé.
-#### Test global
+
+- #### Test global
 Cette partie permet de s'assurer que toutes les fonctionnalités de l'application sont valides, après l'intégration.
 Le diagramme ci-dessous illustre pour chaque étape du déroulement du projet, les dates de début et de fin ainsi que la durée.
 
-[![1-](images/temps.png "1-")](https://github.com/c2-2019/GoStore/images/temps.png "1-")
+![1-](images/temps.png "1-")
+
+
+# Spécifications
+
+## I. Spécifications fonctionnelles
+
+L'utilisateur devra simplement télécharger l'application et créer un profil. Le profil contient le nom complet, la photo du visage de l'utilisateur, les informations de la carte de paiement, son numéro de téléphone et son adresse s'il le souhaite. 
+Une fois le profil créé, l'utilisateur peut accéder au magasin en scannant le QR code. Il peut ensuite effectuer l'achat et prendre les produits qu'il souhaite, puis quitter le magasin sans s'arrêter devant le fonds de comptabilité ou compter la valeur des produits qu'il a pris. 
+Au moment du départ, il est seulement nécessaire de refaire le scan du QR code pour pouvoir sortir.
+
+## II. Spécifications technique
+
+### 1.Technologies utilisées
+
+Dans ce project en doit utiliser Java comme language du developement des services, on doit créer des sevices indepedants using spring boot qui peut être applées par restfull APIs. On a choisir Java a cause de sa capacité à passer facilement d'un système informatique à un autre, la possibilité d'exécuter le même programme sur de nombreux systèmes différents est cruciale, et Java y parvient en étant indépendant de la plate-forme.
+En raison de la robustesse, de la facilité d'utilisation, des capacités multi-plateformes et des fonctionnalités de sécurité de Java, la décision est prise.
+
+D'autre part pour le raspberry pi, senors et automation on doit ustiliser Python. Parce que Python est la language utiliser par defaut in rusbery pi ,et en plus, Python est un langage polyvalent, multiplateforme et open source.
+
+Enfin, pour l'application mobile en doit créer cross-platform mobile app ,
+pour reduire le temps du developement de deux mobile app ios/android , en plus cross platform utilise javascript ce qui donne la facile à intégrer avec d'autres services et fournisseurs et encore il est universal.
 
 
 
-## 2. Ressources
+
+
+
+### 2.Configurations de machines
+
+
+
+### 3.Architecture technique de produit
+
+
+### 4.Les librairies utilisées
+
+
+
+## II. Ressources
 Pour finir, nous allons décrire l'ensemble des ressources mises a disposition pour la réalisation du projet.
+
 #### Ressources humaines
 Le projet sera réalisé par un groupe de trois étudiants. Il est nécessaire d'évaluer la charge de travail que chaque membre sera en mesure de fournir, notamment pour les tâches qui nécessitent une répartition : programmation et tests unitaires. On estime la charge de travail personnel qui devra être
 consacrée à la conception, au développement et aux tests unitaires à environ 120 heures pour chaque membre du groupe.
 
+#### Équipements
+
+Pour que nous puissions créer cette idée et l'appliquer correctement, nous avons besoin d'un ensemble d'équipements:
+
+- Raspberry Pi
+- Bread Board
+- Cables de connections
+- Proximity sensor
+- Camera sensor
+
+## Diagrammes et documents
+
+####  Diagramme de base de données (MLD)
+
+![MLD](images/mld.jpg "MLD")
