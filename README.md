@@ -34,11 +34,26 @@
    
    
    .4. les librairies utilisées
+   
+## Ressources
+
+- #### Ressources humaines
+
+- #### Équipements
+
+## Le fonctionnement du système
+- #### Capteur et données
+- #### Capteurs de poids
+- #### Transmission de données des capteurs 
+- #### Achat
+- #### Entrez, payez, puis laissez
 
 
 ## Diagrammes et documents
 
-#### Diagramme de base de données (MLD)
+- ####  Diagramme de base de données (MLD)
+
+## WireFrames
 ------------
 
 
@@ -206,8 +221,64 @@ Pour que nous puissions créer cette idée et l'appliquer correctement, nous avo
 - Proximity sensor
 - Camera sensor
 
+
+## Le fonctionnement du système
+
+#### Capteur et données
+
+Notre objectif était de fournir la même expérience qu’Amazon Go. Pour ce faire, les capteurs et la collecte de données étaient essentiels, mais de nombreux capteurs différents auraient pu être choisis pour les besoins. Initialement, nous avons collecté des images statiques à l'aide d'une caméra et analysé les données téléchargées. Au final cependant, nous avons choisi les deux suivants:
+- Capteur images (Camera)
+- capteur de distance (Proximity sensors)
+
+#### Capteur images
+Un capteur image reconnaît le visage d'un personne. Il suit les clients dans le magasin et détecte le mouvement des clients qui tendent leur main vers les produits .
+
+Ici, un capteur , y compris le réseau local, ont été configurés et l'application qui analyse les données du capteur est déjà en cours d'exécution. Les données de capteur suivent les clients et envoient l'événement IoT via APO, à chaque fois qu'ils entrent dans le magasin et chaque fois qu'ils cherchent les produits. Ceci déclenche alors une fonction.
+
+
+
+#### Capteurs de distanse
+Pour les capteurs de distanse, appelée Proximity sensor, est fixée à l’arrière de chaque conteneur, où les produits sont stockés. Il envoie périodiquement la distance des conteneurs. Du côté Back-end, les données de base des produits (par exemple, le mesure moyen du produit A est de 7 cm) sont gérées. Par conséquent, le système peut finalement indiquer qu'un client a acheté l'un des en-cas A si le mesure de son conteneur a diminué de 7 cm, ou deux en-cas A si le poids a diminué de 14 cm. Néanmoins, ce n’était pas une logique si simple. C'était en fait assez complexe en raison de nombreux éléments variables. Par exemple, les données du capteur n'étaient pas toujours précises, ou le timing exact (horodatage) pourrait être légèrement différent.
+
+
+
+#### Transmission de données des capteurs 
+Il existe un méthode principale pour transmettre les données des capteurs, qui est HTTP (s).
+
+ Il serait bon de configurer une passerelle API avant un service, puis d'enregistrer les données dans MYSQL.
+
+Dans nos scénarios, les capteurs de distance transfèrent les données via HTTP qui sont traitées dans Cloud, API Gateway, service et MySQL. L'énorme quantité de données accumulées dans MySQL sera automatiquement supprimée dans quelques jours avec le réglage de la durée de vie.
+
+#### Achat
+Dans un magasin sans caisse, le système doit reconnaître qui a acheté quels produits et combien. Les données d'entrée pour l'accusé de réception sont collectées par les capteurs, mais ces données, comme mentionné ci-dessus, ne sont pas toujours précises. Le système doit donc les reconnaître de manière exhaustive en utilisant plusieurs données de capteur.
+
+Dans cette version, nous n’avons implémenté que deux types de capteurs. Le capteur de distance envoie un événement d'achat à un service a traver un API lors de la détection du changement de la distance du conteneur. L'événement d'achat sera mis en correspondance par un service avec les informations du deuxième type de capteur - capteur d'image qui detecte quel client a effectuer l'achat.
+
+Une des clés pour le traitement des données de capteurs multiples réside dans leurs horodatages. Cependant, ils ne correspondent généralement pas parfaitement, aussi une différence de quelques secondes devrait être autorisée. Par exemple, lorsque l'horodatage d'un événement d'achat est à 14:20:50, le capteur de d'image le détecte à 14:20:51. Dans notre système, les événements de quelques secondes de différence sont reconnus comme des événements simultanés.
+
+#### Entrez, payez, puis laissez
+
+Les clients entrent dans le magasin en utilisant un code QR dans une application mobile. Lors de leur enregistrement, ils sont authentifiés via un service et l'API sera déclenchée, tout comme les applications mobiles normales.
+
+Ce qui est unique pour ce magasin sans caissier, c'est que l'authentification est associée aux données de suivi collectées par les capteurs images. Dans le magasin, les capteurs images suivent les clients. Par conséquent, les données elles-mêmes ne peuvent pas dire qui a acheté les produits, lesquels ont été pris. Pour identifier le client, un capteur distance envoie un événement lorsqu'un client prend un produit. Il est associé aux informations d'enregistrement envoyées via l'application mobile.
+
+Des processus similaires se produisent lorsqu'un client quitte le magasin. Lorsqu'un client Scan QR code pour sortira du zone de stockage, un événement de sortie est envoyé à une service. le service met en correspondance les informations d'enregistrement et le système peut évaluer que le client s'est arrêté avec succès et encore verifier si le client peut sortir ou non par rapport a ses informations de payment .
+
+Lorsque vous quittez le magasin, vous recevez un rapport de paiement dans l'application mobile.
+
+
+
+
+
+
+
 ## Diagrammes et documents
 
 ####  Diagramme de base de données (MLD)
 
-![MLD](images/mld.jpg "MLD")
+![MLD](images/mld.jpg)
+
+
+## WireFrames
+
+![MLD](images/wireframes.jpg)
