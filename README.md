@@ -52,6 +52,10 @@
 ## Diagrammes et documents
 
 - ####  Diagramme de base de données (MLD)
+- ####  Diagramme de cas d'utilisation
+- ####  Diagramme d'activité
+- ####  Diagramme d'etat de proximity sensor
+- ####  Diagramme d'etat de capteur image
 
 ## WireFrames
 ------------
@@ -277,6 +281,22 @@ Lorsque vous quittez le magasin, vous recevez un rapport de paiement dans l'appl
 ####  Diagramme de base de données (MLD)
 
 ![MLD](images/mld.jpg)
+
+####  Diagramme de cas d'utilisation
+
+![MLD](images/diagram-utilisation.png)
+
+####  Diagramme d'activité
+
+![MLD](images/diagram-activite.png)
+
+####  Diagramme d'etat de proximity sensor
+
+![MLD](images/diagram-etat-proximity-sensor.png)
+
+####  Diagramme d'etat de capteur image
+
+![MLD](images/diagram-etat-Camera.png)
 
 
 ## WireFrames
