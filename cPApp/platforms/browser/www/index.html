@@ -65,12 +65,25 @@
                 <div class="register-content">
                     <a href="#" class="close-login-screen floatright"><i class="fa fa-times"></i></a>
                     <div class="inputbox">
-                        <span>Username:</span><br>
-                        <input type="text" name="name" id="name" placeholder="Enter your name">
+                        <span>Email:</span><br>
+                        <input type="email" name="email" id="email_input" placeholder="Enter your email">
                     </div>
                     <div class="inputbox">
                         <span>Password:</span><br>
-                        <input type="password" name="password" placeholder="***********">
+                        <input type="password" name="password" id="pw_input" placeholder="Enter your password">
+                    </div>
+                    <div class="inputbox">
+                        <div class="custom_msg">
+                            <p></p>
+                        </div>
+                        <div class="custom_loader">
+                            <div class="lds-ellipsis">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="inputbox">
                         <button id="do_action_login" class="button button-big">Login</button>
@@ -104,6 +117,19 @@
             <div class="inputbox">
                 <span>Password:</span><br>
                 <input type="password" name="password2" placeholder="Enter your password">
+            </div>
+            <div class="inputbox">
+                <div class="custom_msg">
+                    <p></p>
+                </div>
+                <div class="custom_loader">
+                    <div class="lds-ellipsis">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
             </div>
             <div class="inputbox">
                 <button id="do_action_register" class="button button-big">Sign Up</button>
