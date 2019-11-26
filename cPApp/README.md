@@ -6,6 +6,6 @@
 
 ### Cart Functionality
 
-### GoStore Overvoew
+### GoStore Overview
 
   
