@@ -44,7 +44,7 @@ myApp.onPageInit('index', function (page) {
     var apiEndPoint = "";
 
     $(function () {
-        
+
         //Login action
         $("#do_action_login").on('click', function () {
             var loginPopup = $('.login-screen');
