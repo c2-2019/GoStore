@@ -64,32 +64,23 @@
             <div class="page-content login-screen-content registerbody">
                 <div class="register-content">
                     <a href="#" class="close-login-screen floatright"><i class="fa fa-times"></i></a>
-                    <div class="inputbox">
-                        <span>Email:</span><br>
-                        <input type="email" name="email" id="email_input" placeholder="Enter your email">
-                    </div>
-                    <div class="inputbox">
-                        <span>Password:</span><br>
-                        <input type="password" name="password" id="pw_input" placeholder="Enter your password">
-                    </div>
-                    <div class="inputbox">
-                        <div class="custom_msg">
-                            <p></p>
+                    <form action="#">
+                        <div class="inputbox">
+                            <span>Username:</span><br>
+                            <input type="text" name="name" id="name" placeholder="Username">
                         </div>
-                        <div class="custom_loader">
-                            <div class="lds-ellipsis">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
+                        <div class="inputbox">
+                            <span>Password:</span><br>
+                            <input type="password" name="password" placeholder="***********">
                         </div>
-                    </div>
-                    <div class="inputbox">
-                        <button id="do_action_login" class="button button-big">Login</button>
-                    </div>
-                    <p>
-                        Don’t have an account? <a data-popup=".popup-register" class="open-popup" href="#">Sign Up</a>
+                        <div class="inputbox">
+                            <a data-popup=".popup-forgetpass" class="open-popup" href="#">Forget Password?</a>
+                        </div>
+                        <div class="inputbox">
+                            <button class="button button-big">Login</button>
+                        </div>
+                    </form>
+                    <p>Don’t have an account? <a data-popup=".popup-register" class="open-popup" href="#">Sign Up</a>
                     </p>
                 </div>
             </div>
@@ -102,38 +93,27 @@
     <div class="registerbody">
         <a href="#" class="close-popup closebutton"><i class="fa fa-times"></i></a>
         <div class="register-content">
-            <div class="inputbox">
-                <span>Full Name:</span><br>
-                <input type="text" name="fulname" placeholder="Enter your name">
-            </div>
-            <div class="inputbox">
-                <span>Username:</span><br>
-                <input type="text" name="username2" placeholder="Enter your username">
-            </div>
-            <div class="inputbox">
-                <span>Email:</span><br>
-                <input type="email" name="email" placeholder="Enter your email">
-            </div>
-            <div class="inputbox">
-                <span>Password:</span><br>
-                <input type="password" name="password2" placeholder="Enter your password">
-            </div>
-            <div class="inputbox">
-                <div class="custom_msg">
-                    <p></p>
+            <form action="#">
+                <div class="inputbox">
+                    <span>Full Name:</span><br>
+                    <input type="text" name="fulname" placeholder="Full Name">
                 </div>
-                <div class="custom_loader">
-                    <div class="lds-ellipsis">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
+                <div class="inputbox">
+                    <span>Username:</span><br>
+                    <input type="text" name="username2" placeholder="Username">
                 </div>
-            </div>
-            <div class="inputbox">
-                <button id="do_action_register" class="button button-big">Sign Up</button>
-            </div>
+                <div class="inputbox">
+                    <span>Email:</span><br>
+                    <input type="email" name="email" placeholder="email@gmail.com">
+                </div>
+                <div class="inputbox">
+                    <span>Password:</span><br>
+                    <input type="password" name="password2" placeholder="***********">
+                </div>
+                <div class="inputbox">
+                    <button class="button button-big">Sign Up</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -170,15 +150,21 @@
                                  data-pagination-clickable="true" class="swiper-container swiper-init">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="img/main/slider/bg2.png" alt="">
+                                        <img src="img/main/slider/2/bg1.jpg" alt="">
                                         <div class="slide-text">
                                             <h2>The <span>Store</span><br>Of The Future</h2>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="img/main/slider/bg3.png" alt="">
+                                        <img src="img/main/slider/2/bg2.png" alt="">
                                         <div class="slide-text">
                                             <h2><span>Cashier-less</span><br>Store</h2>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="img/main/slider/2/bg3.png" alt="">
+                                        <div class="slide-text">
+                                            <h2><span>Meet</span><br>GoStore</h2>
                                         </div>
                                     </div>
                                 </div>
