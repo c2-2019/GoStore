@@ -64,23 +64,19 @@
             <div class="page-content login-screen-content registerbody">
                 <div class="register-content">
                     <a href="#" class="close-login-screen floatright"><i class="fa fa-times"></i></a>
-                    <form action="#">
-                        <div class="inputbox">
-                            <span>Username:</span><br>
-                            <input type="text" name="name" id="name" placeholder="Username">
-                        </div>
-                        <div class="inputbox">
-                            <span>Password:</span><br>
-                            <input type="password" name="password" placeholder="***********">
-                        </div>
-                        <div class="inputbox">
-                            <a data-popup=".popup-forgetpass" class="open-popup" href="#">Forget Password?</a>
-                        </div>
-                        <div class="inputbox">
-                            <button class="button button-big">Login</button>
-                        </div>
-                    </form>
-                    <p>Don’t have an account? <a data-popup=".popup-register" class="open-popup" href="#">Sign Up</a>
+                    <div class="inputbox">
+                        <span>Username:</span><br>
+                        <input type="text" name="name" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="inputbox">
+                        <span>Password:</span><br>
+                        <input type="password" name="password" placeholder="***********">
+                    </div>
+                    <div class="inputbox">
+                        <button id="do_action_login" class="button button-big">Login</button>
+                    </div>
+                    <p>
+                        Don’t have an account? <a data-popup=".popup-register" class="open-popup" href="#">Sign Up</a>
                     </p>
                 </div>
             </div>
@@ -93,27 +89,25 @@
     <div class="registerbody">
         <a href="#" class="close-popup closebutton"><i class="fa fa-times"></i></a>
         <div class="register-content">
-            <form action="#">
-                <div class="inputbox">
-                    <span>Full Name:</span><br>
-                    <input type="text" name="fulname" placeholder="Full Name">
-                </div>
-                <div class="inputbox">
-                    <span>Username:</span><br>
-                    <input type="text" name="username2" placeholder="Username">
-                </div>
-                <div class="inputbox">
-                    <span>Email:</span><br>
-                    <input type="email" name="email" placeholder="email@gmail.com">
-                </div>
-                <div class="inputbox">
-                    <span>Password:</span><br>
-                    <input type="password" name="password2" placeholder="***********">
-                </div>
-                <div class="inputbox">
-                    <button class="button button-big">Sign Up</button>
-                </div>
-            </form>
+            <div class="inputbox">
+                <span>Full Name:</span><br>
+                <input type="text" name="fulname" placeholder="Enter your name">
+            </div>
+            <div class="inputbox">
+                <span>Username:</span><br>
+                <input type="text" name="username2" placeholder="Enter your username">
+            </div>
+            <div class="inputbox">
+                <span>Email:</span><br>
+                <input type="email" name="email" placeholder="Enter your email">
+            </div>
+            <div class="inputbox">
+                <span>Password:</span><br>
+                <input type="password" name="password2" placeholder="Enter your password">
+            </div>
+            <div class="inputbox">
+                <button id="do_action_register" class="button button-big">Sign Up</button>
+            </div>
         </div>
     </div>
 </div>
@@ -150,21 +144,15 @@
                                  data-pagination-clickable="true" class="swiper-container swiper-init">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="img/main/slider/2/bg1.jpg" alt="">
+                                        <img src="img/main/slider/bg2.png" alt="">
                                         <div class="slide-text">
                                             <h2>The <span>Store</span><br>Of The Future</h2>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="img/main/slider/2/bg2.png" alt="">
+                                        <img src="img/main/slider/bg3.png" alt="">
                                         <div class="slide-text">
                                             <h2><span>Cashier-less</span><br>Store</h2>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/main/slider/2/bg3.png" alt="">
-                                        <div class="slide-text">
-                                            <h2><span>Meet</span><br>Amazon Go</h2>
                                         </div>
                                     </div>
                                 </div>
@@ -175,13 +163,13 @@
                     <!-- about us area start-->
                     <div class="standard-row">
                         <div class="section-title">
-                            <h3>What Is <strong>Amazon Go?</strong></h3>
+                            <h3>What Is <strong>GoStore?</strong></h3>
                         </div>
                         <div class="stander-content">
                             <div class="about-content">
-                                <p class="alignjust">Amazon Go is a new kind of store with no checkout required. We
+                                <p class="alignjust">GoStore is a new kind of store with no checkout required. We
                                     created the world’s most advanced shopping technology so you never have to wait in
-                                    line. With our Just Walk Out Shopping experience, simply use the Amazon Go app to
+                                    line. With our Just Walk Out Shopping experience, simply use the GoStore app to
                                     enter the store, take the products you want, and go! No lines, no checkout. (No,
                                     seriously.)</p>
                                 <a href="about.html" class="floatright">Read More</a>
