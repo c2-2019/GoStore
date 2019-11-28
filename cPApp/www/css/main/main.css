@@ -1,16 +1,17 @@
-.mmMainLogo{
-    width:100%;
-    max-width:170px;
+.mmMainLogo {
+    width: 100%;
+    max-width: 170px;
 }
 
-.footer-row{
-    margin:30px 0 20px;
+.footer-row {
+    margin: 30px 0 20px;
 }
 
 /*Loader start*/
-.custom_loader,.custom_msg{
+.custom_loader, .custom_msg {
     display: none;
 }
+
 .lds-ellipsis {
     display: inline-block;
     position: relative;
@@ -75,19 +76,28 @@
     }
 }
 
-.registerbody{
-    height:105%;
+.registerbody {
+    height: 105%;
 }
 
-.noLink{
-    cursor:default;
+.noLink {
+    cursor: default;
     pointer-events: none;
 }
 
-.menu ul li.addAuth{
+.menu ul li.addAuth {
     display: none;
 }
 
-.loginUser{
-    margin:0 0 0 5px;
+.loginUser {
+    margin: 0 0 0 5px;
+}
+
+.emptyCart p {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.removeFromCart{
+    display: none;
 }

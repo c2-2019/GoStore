@@ -50,6 +50,45 @@ myApp.onPageInit('index', function (page) {
 
 });
 
+/*---------------------
+cart page
+--------------------- */
+myApp.onPageInit('cart-page', function (page) {
+
+    var apiEndPoint = "http://ec2-99-80-232-142.eu-west-1.compute.amazonaws.com:9080/";
+    var cartEndpoint = apiEndPoint + "api/cart";
+
+    if(userToken){
+        setInterval(function(){
+            $.ajax({
+                'type': 'GET',
+                'url': cartEndpoint,
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "Authorization": "Bearer "+userToken
+                },
+                'dataType': 'json',
+                'success': function (data, status) {
+                    if(data && data.products && data.products.length!==0){
+
+                        // Filled Cart => Add Cart Option
+                        $('.cart-page .emptyCart').slideUp('fast');
+                        $('.cart-page .cartOption').removeClass('removeFromCart');
+                    }else{
+
+                        // Empty Cart => Remove Cart Option
+                        $('.cart-page .emptyCart').slideDown('fast');
+                        $('.cart-page .cartOption').addClass('removeFromCart');
+                    }
+                },
+                'error':function(e){
+
+                }
+            });
+        },1000);
+    }
+});
+
 
 (function ($) {
     "use strict";
