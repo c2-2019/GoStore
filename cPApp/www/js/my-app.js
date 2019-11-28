@@ -157,43 +157,43 @@ myApp.onPageInit('cart-page', function (page) {
         });
 
         //Register action
-        $("#do_action_register").on('click', function () {
-            var registerPopup = $('.popup-register');
-
-            var registerMsg = registerPopup.find('.custom_msg');
-            var registerLoader = registerPopup.find('.custom_loader');
-
-            var registerEndpoint = apiEndPoint + "";
-
-            var apiEmail = registerPopup.find('#reg_email_input').val();
-            var apiPassword = registerPopup.find('#reg_pw_input').val();
-
-            //Reset
-            registerMsg.slideUp('fast');
-            registerMsg.html("");
-            registerLoader.slideUp('fast');
-
-            if (apiEmail && apiPassword) {
-
-                registerLoader.slideDown('fast');
-                registerMsg.html('Creating your new account...');
-                registerMsg.slideDown('fast');
-
-                //Add API call
-                $.post(registerEndpoint, {
-                    email: apiEmail,
-                    password: apiPassword
-                }).done(function (ret1) {
-                    if (ret1) {
-                        var retData = ret1['ret_data'];
-                    }
-                }).fail(function () {
-                });
-            } else {
-                registerMsg.html('Missing email and/or password!');
-                registerMsg.slideDown('fast');
-            }
-        });
+        // $("#do_action_register").on('click', function () {
+        //     var registerPopup = $('.popup-register');
+        //
+        //     var registerMsg = registerPopup.find('.custom_msg');
+        //     var registerLoader = registerPopup.find('.custom_loader');
+        //
+        //     var registerEndpoint = apiEndPoint + "";
+        //
+        //     var apiEmail = registerPopup.find('#reg_email_input').val();
+        //     var apiPassword = registerPopup.find('#reg_pw_input').val();
+        //
+        //     //Reset
+        //     registerMsg.slideUp('fast');
+        //     registerMsg.html("");
+        //     registerLoader.slideUp('fast');
+        //
+        //     if (apiEmail && apiPassword) {
+        //
+        //         registerLoader.slideDown('fast');
+        //         registerMsg.html('Creating your new account...');
+        //         registerMsg.slideDown('fast');
+        //
+        //         //Add API call
+        //         $.post(registerEndpoint, {
+        //             email: apiEmail,
+        //             password: apiPassword
+        //         }).done(function (ret1) {
+        //             if (ret1) {
+        //                 var retData = ret1['ret_data'];
+        //             }
+        //         }).fail(function () {
+        //         });
+        //     } else {
+        //         registerMsg.html('Missing email and/or password!');
+        //         registerMsg.slideDown('fast');
+        //     }
+        // });
     });
 
 
