@@ -2,6 +2,7 @@
 import RPi.GPIO as GPIO
 from picamera import PiCamera
 import time
+import requests
 
 # Common variables
 itemPicked = False
@@ -43,12 +44,76 @@ try:
     print("Distance is: ", distance, "cm")
     print(" ")
 
+    # Login to get Auth Token
+    print("Logging you in")
+
+    token = ''
+
+    headers = {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+    }
+
+    payload = {
+        "username": "marounm@gmail.com",
+        "password": "123456"
+    }
+
+    r = requests.post(
+        "http://ec2-99-80-232-142.eu-west-1.compute.amazonaws.com:9080/api/login",
+        json=payload,
+        headers=headers
+    )
+
+    if(r):
+        token = r.json()['token']
+        print("You are successfully logged in")
+
+    else:
+        print("Couldn't log you in, please try again")
+
     # Checking if an item was taken
-    if distance > 5:
+    if distance > 10:
         itemPicked = True
         print("An item was taken")
+
+        # Send API call to add to cart
+        print("Adding Pepsi to cart")
+
+        headers = {
+            "Authorization": "Bearer "+token,
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        }
+        payload = {
+            "quantity": 1,
+            "productId": "B0001"
+        }
+
+        r = requests.post(
+            "http://ec2-99-80-232-142.eu-west-1.compute.amazonaws.com:9080/api/cart/add",
+            json=payload,
+            headers=headers
+        )
+
+        print("Pepsi was added to cart")
+
     else:
         print("No items were taken")
+
+        # Send API call to remove from cart
+        print("Removing Pepsi from cart")
+
+        headers = {
+            "Authorization": "Bearer "+token,
+        }
+
+        r = requests.delete(
+            "http://ec2-99-80-232-142.eu-west-1.compute.amazonaws.com:9080/api/cart/B0001",
+            headers=headers
+        )
+
+        print("Pepsi was removed from cart")
 
 finally:
     # Clean GPIO when done
