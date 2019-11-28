@@ -14,6 +14,19 @@ myApp.addView('.view-main', {
     dynamicNavbar: true
 });
 
+// Login check
+var userToken=window.localStorage.getItem("token");
+var userEmail=window.localStorage.getItem("account");
+
+if(userToken){
+    $('.removeAuth').slideUp();
+    $('.addAuth').slideDown();
+
+    if(userEmail){
+        $('.loginUser').html(userEmail);
+    }
+}
+
 /*---------------------
 index page
 --------------------- */
@@ -41,9 +54,16 @@ myApp.onPageInit('index', function (page) {
 (function ($) {
     "use strict";
 
-    var apiEndPoint = "";
+    var apiEndPoint = "http://ec2-99-80-232-142.eu-west-1.compute.amazonaws.com:9080/";
 
     $(function () {
+        //Logout
+        $("#logoutAction").on('click',function(){
+            window.localStorage.removeItem("token");
+            window.localStorage.removeItem("account");
+
+            location.reload();
+        });
 
         //Login action
         $("#do_action_login").on('click', function () {
@@ -52,25 +72,49 @@ myApp.onPageInit('index', function (page) {
             var loginMsg = loginPopup.find('.custom_msg');
             var loginLoader = loginPopup.find('.custom_loader');
 
-            var loginEndpoint = apiEndPoint + "";
+            var loginEndpoint = apiEndPoint + "api/login";
 
-            var apiEmail = loginMsg.find('.email_input').val();
-            var apiPassword = loginMsg.find('.pw_input').val();
+            var apiEmail = loginPopup.find('#email_input').val();
+            var apiPassword = loginPopup.find('#pw_input').val();
 
-            loginLoader.slideDown('fast');
-            loginMsg.html('Logging you in...');
-            loginMsg.slideDown('fast');
+            //Reset
+            loginMsg.slideUp('fast');
+            loginMsg.html("");
+            loginLoader.slideUp('fast');
 
-            //Add API call
-            $.post(loginEndpoint, {
-                email: apiEmail,
-                password: apiPassword
-            }).done(function (ret1) {
-                if (ret1) {
-                    var retData = ret1['ret_data'];
-                }
-            }).fail(function () {
-            });
+            if (apiEmail && apiPassword) {
+                loginLoader.slideDown('fast');
+                loginMsg.html('Logging you in...');
+                loginMsg.slideDown('fast');
+
+                //Add API call
+                var loginData = {};
+                loginData['username'] = apiEmail;
+                loginData['password'] = apiPassword;
+
+                $.ajax({
+                    'type': 'POST',
+                    'url': loginEndpoint,
+                    'contentType': 'application/json; charset=utf-8',
+                    'data': JSON.stringify(loginData),
+                    'dataType': 'json',
+                    'success': function (data, status) {
+                        if(data && data.token){
+                            window.localStorage.setItem("token", data.token);
+                            window.localStorage.setItem("account", data.account);
+                            location.reload();
+                        }
+                    },
+                    'error':function(e){
+                        loginLoader.slideUp('fast');
+                        loginMsg.html('Incorrect email and/or password');
+                        loginMsg.slideDown('fast');
+                    }
+                });
+            } else {
+                loginMsg.html('Missing email and/or password');
+                loginMsg.slideDown('fast');
+            }
         });
 
         //Register action
@@ -82,23 +126,34 @@ myApp.onPageInit('index', function (page) {
 
             var registerEndpoint = apiEndPoint + "";
 
-            var apiEmail = registerPopup.find('.email_input').val();
-            var apiPassword = registerPopup.find('.pw_input').val();
+            var apiEmail = registerPopup.find('#reg_email_input').val();
+            var apiPassword = registerPopup.find('#reg_pw_input').val();
 
-            registerLoader.slideDown('fast');
-            registerMsg.html('Creating your new account...');
-            registerMsg.slideDown('fast');
+            //Reset
+            registerMsg.slideUp('fast');
+            registerMsg.html("");
+            registerLoader.slideUp('fast');
 
-            //Add API call
-            $.post(registerEndpoint, {
-                email: apiEmail,
-                password: apiPassword
-            }).done(function (ret1) {
-                if (ret1) {
-                    var retData = ret1['ret_data'];
-                }
-            }).fail(function () {
-            });
+            if (apiEmail && apiPassword) {
+
+                registerLoader.slideDown('fast');
+                registerMsg.html('Creating your new account...');
+                registerMsg.slideDown('fast');
+
+                //Add API call
+                $.post(registerEndpoint, {
+                    email: apiEmail,
+                    password: apiPassword
+                }).done(function (ret1) {
+                    if (ret1) {
+                        var retData = ret1['ret_data'];
+                    }
+                }).fail(function () {
+                });
+            } else {
+                registerMsg.html('Missing email and/or password!');
+                registerMsg.slideDown('fast');
+            }
         });
     });
 

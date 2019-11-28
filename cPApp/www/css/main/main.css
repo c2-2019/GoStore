@@ -78,3 +78,16 @@
 .registerbody{
     height:105%;
 }
+
+.noLink{
+    cursor:default;
+    pointer-events: none;
+}
+
+.menu ul li.addAuth{
+    display: none;
+}
+
+.loginUser{
+    margin:0 0 0 5px;
+}

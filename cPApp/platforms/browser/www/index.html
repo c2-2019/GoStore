@@ -39,18 +39,28 @@
     <div class="mainmenu">
         <div class="menu">
             <ul>
+                <li class="addAuth">
+                    <a href="#" class="noLink">
+                        Hello,<span class="loginUser"></span>
+                    </a>
+                </li>
                 <li>
                     <a href="index.html" class="close-panel"><i class="pe-7s-home pe-fw"></i> HOME</a>
                 </li>
                 <li>
                     <a href="about.html" class="close-panel"><i class="pe-7s-user pe-fw"></i> About Us</a>
                 </li>
-                <li>
+                <li class="addAuth">
                     <a href="cart.html" class="close-panel"><i class="pe-7s-cart pe-fw"></i>Cart</a>
                 </li>
-                <li>
+                <li class="removeAuth">
                     <a href="#" class="open-login-screen close-panel"><i
                             class="pe-7s-back-2 pe-fw"></i>login/Register</a>
+                </li>
+                <li class="addAuth">
+                    <a href="#" id="logoutAction">
+                        <i class="pe-7s-lock pe-fw"></i> Logout?
+                    </a>
                 </li>
             </ul>
         </div>
@@ -104,19 +114,15 @@
         <div class="register-content">
             <div class="inputbox">
                 <span>Full Name:</span><br>
-                <input type="text" name="fulname" placeholder="Enter your name">
-            </div>
-            <div class="inputbox">
-                <span>Username:</span><br>
-                <input type="text" name="username2" placeholder="Enter your username">
+                <input type="text" name="reg_name" id="reg_name_input" placeholder="Enter your name">
             </div>
             <div class="inputbox">
                 <span>Email:</span><br>
-                <input type="email" name="email" placeholder="Enter your email">
+                <input type="email" name="reg_email" id="reg_email_input" placeholder="Enter your email">
             </div>
             <div class="inputbox">
                 <span>Password:</span><br>
-                <input type="password" name="password2" placeholder="Enter your password">
+                <input type="password" name="reg_password" id="reg_pw_input" placeholder="Enter your password">
             </div>
             <div class="inputbox">
                 <div class="custom_msg">
@@ -132,7 +138,7 @@
                 </div>
             </div>
             <div class="inputbox">
-                <button id="do_action_register" class="button button-big">Sign Up</button>
+                <button id="do_action_register" class="button button-big">Register</button>
             </div>
         </div>
     </div>
@@ -151,7 +157,7 @@
                 <!-- We have home navbar without left link-->
                 <div class="center sliding"><img class="mmMainLogo" src="img/main/logo.png" alt=""></div>
                 <div class="right">
-                    <a href="#" data-panel="right" class="link icon-only open-login-screen"><img src="img/menu2.png"
+                    <a href="#" data-panel="right" class="link icon-only open-login-screen removeAuth"><img src="img/menu2.png"
                                                                                                  alt=""></a>
                 </div>
             </div>
@@ -181,15 +187,6 @@
                                             <h2><span>Cashier-less</span><br>Store</h2>
                                         </div>
                                     </div>
-<<<<<<< HEAD
-=======
-                                    <div class="swiper-slide">
-                                        <img src="img/main/slider/2/bg3.png" alt="">
-                                        <div class="slide-text">
-                                            <h2><span>Meet</span><br>GoStore</h2>
-                                        </div>
-                                    </div>
->>>>>>> 87709b11003c39cbf20e85bf2ccecf29f53a1c53
                                 </div>
                             </div>
                         </div>
