@@ -25,7 +25,6 @@ public class activity_scanner extends AppCompatActivity {
     CameraSource cameraSource;
     TextView textView;
     BarcodeDetector barcodeDetector;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,9 +33,7 @@ public class activity_scanner extends AppCompatActivity {
         textView=(TextView)findViewById(R.id.textView);
 
         barcodeDetector= new BarcodeDetector.Builder(this).setBarcodeFormats(Barcode.QR_CODE).build();
-
         cameraSource= new CameraSource.Builder(this,barcodeDetector).setRequestedPreviewSize(640,480).build();
-
         surfaceView.getHolder().addCallback(new SurfaceHolder.Callback() {
 
             @Override

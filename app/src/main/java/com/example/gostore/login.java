@@ -1,5 +1,4 @@
 package com.example.gostore;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,8 +12,6 @@ public class login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
-
-
         Button backButton = (Button) findViewById(R.id.button_back);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
