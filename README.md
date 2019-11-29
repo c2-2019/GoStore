@@ -194,20 +194,6 @@ pour reduire le temps du developement de deux mobile app ios/android , en plus c
 
 
 
-
-
-
-### 2.Configurations de machines
-
-
-
-### 3.Architecture technique de produit
-
-
-### 4.Les librairies utilisées
-
-
-
 ## II. Ressources
 Pour finir, nous allons décrire l'ensemble des ressources mises a disposition pour la réalisation du projet.
 
